@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC:wght@400;700&family=Kalam:wght@300;400;700&family=LXGW+WenKai+Mono+TC&family=Luckiest+Guy&family=Pacifico&family=Playwrite+AU+VIC:wght@100..400&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    color: rgb(26, 25, 25);
+    font-size: 1.25em;
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+header {
+    background: linear-gradient(to bottom, rgba(15, 97, 91, 0.877),rgba(13, 33, 74, 0.858));
+    color: #fff;
+    padding: 0.6rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e8b612;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav ul li a:hover{
+    color: rgb(255, 89, 0);
+}
+
+main {
+    min-height: 100vh;
+    max-width: 200vh;
+    justify-content: center;
+    margin: 0;
+    padding: 2rem 2rem;
+    background: linear-gradient(to top, #7fa7e8, #c7c5c5);
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 1rem 2.5rem;
+}
+
+form button{
+    color: #fff;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.movie-card {
+    background: linear-gradient(to top,
+            rgb(119, 117, 117),
+            #fff,
+            #fff,
+            #fff,
+            #fff,
+            #fff,
+            #fff);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card:hover {
+    border: none;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card img.thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.movie-detail img.poster {
+    margin: 1.2rem;
+    width: 300px;
+    height: auto;
+}
+
+.movie-detail ul {
+    list-style: none;
+    padding: 0 2rem;
+}
+
+.movie-detail li {
+    margin: 1.5rem 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+button {
+    background-color: #960808;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3b1717;
+}
+
+button a{
+    color: rgb(206, 202, 202);
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.add-movie-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-movie-card:hover{
+    background-color: #221d1d;
+}
+
+.add-movie-card h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+.add-movie-card .plus-icon {
+    font-size: 4rem;
+    color: #333;
+    display: block;
+    width: 100%;
+}
+
+.add-movie-card:hover h2{
+    color: whitesmoke;
+}
+
+.add-movie-card:hover .plus-icon{
+    color: whitesmoke;
+}
+
+a.add {
+    display: flex;
+    align-items: center;
+}
+
+.pagination {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination .step-links {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 0.7rem;
+    background-color: #0e0d0d;
+    border-radius: 2rem;
+}
+.pagination .step-links a {
+    color: #bdb5b5;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-right: 1px solid #0e0d0d;
+}
+.pagination .step-links a:last-child {
+    border-right: none;
+}
+.pagination .step-links .current {
+    font-size: 1rem;
+    color: #bdb5b5;
+    font-weight: bold;
+    padding: 4px 8px;
+}

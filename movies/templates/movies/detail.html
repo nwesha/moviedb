@@ -1,0 +1,14 @@
+{% extends 'movies/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="movie-detail">
+    <img src="{{ movie.poster.url }}" alt="{{ movie.title }} poster">
+    <h2>{{ movie.title }}</h2>
+    <p><strong>Director:</strong> {{ movie.director }}</p>
+    <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
+    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+    <p>{{ movie.description }}</p>
+    <button><a href="{% url 'home' %}">Back to Home</a></button>
+</div>
+{% endblock %}

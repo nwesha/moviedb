@@ -1,0 +1,53 @@
+{% extends 'movies/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Movie List</h1>
+
+<form method="GET" action="">
+    <input type="text" name="q" placeholder="Search by title or genre" value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+</form>
+
+<div class="movie-list">
+    {% for movie in movies %}
+        <div class="movie-card">
+            <a href="{% url 'detail' movie.id %}">
+                {% if movie.poster %}
+                    <img src="{{ movie.poster.url }}" alt="{{ movie.title }} poster" class="thumbnail">
+                {% else %}
+                    <img src="{% static 'images/default-poster.jpg' %}" alt="Default poster" class="thumbnail">
+                {% endif %}
+                <h3>{{ movie.title }}</h3>
+            </a>
+        </div>
+    {% endfor %}
+
+    {% comment %} credentials for editing movies: username = 'guest' & password = 'database123' {% endcomment %}
+
+    <a href="/admin/movies/movie/add/" target="_blank">
+        <div class="add-movie-card">
+            <div class="plus-icon">+</div>
+            <h2>Add Movie</h2>
+        </div>
+    </a>
+</div>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if movies.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ movies.previous_page_number }}">&lsaquo; previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ movies.number }}/{{ movies.paginator.num_pages }}
+        </span>
+
+        {% if movies.has_next %}
+            <a href="?page={{ movies.next_page_number }}">next &rsaquo;</a>
+            <a href="?page={{ movies.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}
