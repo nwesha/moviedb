@@ -2,6 +2,11 @@
 
 MovieDB is a web application that allows users to search, explore, and manage movies. It provides details about movies, including title, description, genre, release date, and ratings. The application is built using Django, and movie data is added directly through the user interface or the admin panel, without the need for an external API.
 
+![image](https://github.com/user-attachments/assets/9a5d77f0-4214-4d99-ba94-99a48f190f6b)
+
+### ScreenRec of the working of the Project
+[Link to Google Drive](https://drive.google.com/drive/folders/1c6Yyegn7ucSCi2-a7Xq1Oh-VR6mV9n3x?usp=sharing)
+
 ## Features
 
 - **Search Movies**: Users can search for movies by title.
